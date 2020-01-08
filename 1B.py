@@ -2,7 +2,7 @@ import time
 
 day = "1B"
 
-inFile = open('{}.in'.format(day), "r")
+inFile = open('inputs/{}.in'.format(day), "r")
 
 start_time = time.time()
 
@@ -13,9 +13,5 @@ def calcFuel(f):
   else:
     return f
     
-res = 0
-for line in inFile:
-  res += calcFuel(int(line)) - int(line)
-
-print(res)
+print(sum((calcFuel(int(x)) -int(x)) for x in inFile))
 print('Execution time: {} ms'.format(round((time.time() - start_time)*1000, 1)))

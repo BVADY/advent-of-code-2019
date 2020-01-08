@@ -3,7 +3,7 @@ import time
 
 day = "10"
 
-inFile = open('{}.in'.format(day), "r")
+inFile = open('inputs/{}.in'.format(day), "r")
 
 start_time = time.time()
 
